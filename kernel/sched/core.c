@@ -8073,6 +8073,9 @@ static int __sched_updown_migrate_handler(struct ctl_table *table, int write,
 			sysctl_sched_capacity_margin_down_boosted :
 			sysctl_sched_capacity_margin_down;
 
+	if (write)
+		return 0;
+
 	mutex_lock(&mutex);
 
 	if (cap_margin_levels == -1 ||
