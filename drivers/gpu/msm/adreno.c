@@ -1610,8 +1610,6 @@ static int adreno_init(struct kgsl_device *device)
 
 	}
 
-	device->pwrscale.devfreqptr->max_freq = 675000000;
-
 	place_marker("M - DRIVER ADRENO Ready");
 
 	return 0;
